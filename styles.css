@@ -18,7 +18,20 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.section {
+    animation: fadeInUp 1s ease-out;
+}
 
 .section {
     padding: 20px;
@@ -53,9 +66,8 @@ body {
 }
 
 .logo {
-    width: 50px; /* Adjust logo size */
-    height: auto;
-    margin-right: 20px;
+    width: 60px; /* Atur lebar sesuai keinginan Anda */
+    height: auto; /* Agar tinggi gambar menyesuaikan proporsi */
 }
 
 .navbar-right {
@@ -104,6 +116,77 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.leaderboard {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.leaderboard tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard td {
+    padding: 10px;
+    text-align: left;
+}
+
+.rank1, .rank2, .rank3 {
+    animation: colorChange 2s infinite alternate;
+}
+
+.rank1 {
+    background-color: #ffd700;
+}
+
+.rank2 {
+    background-color: #c0c0c0;
+}
+
+.rank3 {
+    background-color: #cd7f32;
+}
+
+@keyframes colorChange {
+    0% { background-color: #ffd700; }
+    50% { background-color: #ffecb3; }
+    100% { background-color: #ffd700; }
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    border-radius: 5px;
 }
 
 .card-container {
