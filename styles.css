@@ -11,35 +11,303 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-image: url('https://sy-cdnres.joynetgame.com/static/content/mxdzz/website/webp/first-bg-1.4f1faadb.webp');
+    background-image: url('/first-bg-1.4f1faadb.webp');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.267);
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section-nav {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.479);
+}
+.section-pertama {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.479);
 }
 
+@media screen and (max-width: 600px) {
+    .section-pertama {
+        background-size: contain;
+        background-position: center;
+    }
+}
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+    position: relative;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.section-leaderboard {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.479);
+}
+
+/* Codepen Specific */
 .section {
-    animation: fadeInUp 1s ease-out;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    background-color: #333; /* Warna latar belakang gelap */
+    color: white; /* Warna teks putih */
+    padding: 15px;
+    border-radius: 8px; /* Sudut melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Bayangan */
+}
+
+.footer-content p {
+    margin: 0; /* Menghapus margin default */
+    font-size: 18px; /* Ukuran font */
+}
+
+/* Leaderboard Results */
+/* Leaderboard Styles */
+/* Search Input Styles */
+.ladder-search {
+    flex: 1;
+    padding-right: 25px;
+    position: relative; /* Untuk posisi relatif input */
+}
+
+.ladder-search input {
+    width: 50%;
+    padding: 10px 40px; /* Menambahkan padding tambahan untuk ikon */
+    border: 2px solid #000000; /* Border berwarna merah muda */
+    border-radius: 5px; /* Rounded corners */
+    background-color: white;
+    color: #555;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.ladder-search input:focus {
+    border-color: #FFA500; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+
+.ladder-search::after {
+    content: '🔍'; /* Ikon pencarian */
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e91e63; /* Warna ikon */
+    font-size: 18px; /* Ukuran ikon */
+}
+.ladder-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #ffffff; /* Warna oranye */
+    padding: 10px 25px;
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.ladder-title {
+    flex: 2;
+}
+
+.ladder-search {
+    flex: 1;
+    padding-right: 25px;
+}
+/* Leaderboard Section */
+#leaderboard {
+    background-color: rgba(255, 255, 255, 0); /* Warna latar belakang putih */
+    padding: 20px; /* Padding untuk jarak dalam section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+/* Leaderboard Results */
+.leaderboard-results {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan jarak antar sel */
+}
+
+/* Centering Text in Table */
+.leaderboard-results tbody td {
+    text-align: center; /* Memusatkan teks */
+    color: white; /* Warna teks header */
+    padding: 15px;
+    background: #1a1a1a;
+    font-size: 16px;
+    border-bottom: 5px solid #232323;
+    vertical-align: middle;
+}
+
+/* Tabel Header */
+.leaderboard-results thead th {
+    padding: 25px;
+    background: #000000; /* Warna oranye untuk header */
+    color: white; /* Warna teks header */
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc; /* Batas bawah tabel */
+}
+
+/* Tabel Body */
+/* Gambar di Leaderboard */
+.leaderboard-results tbody td img {
+    width: 50px; /* Lebar gambar */
+    height: 50px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar berbentuk lingkaran */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+
+/* Product Card Container */
+.product-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Jarak antara kartu */
+}
+
+/* Product Card */
+.product-card {
+    border: 1px solid #cccccc00; /* Border untuk card */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Agar pembungkus tidak melebihi card */
+    transition: transform 0.3s; /* Efek transisi */
+    width: 200px; /* Lebar tetap untuk kartu produk */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+.price {
+    color: green; /* Warna hijau untuk teks harga */
+    font-weight: bold; /* Membuat teks harga menjadi tebal */
+}
+
+/* Image Wrapper */
+.image-wrapper {
+    background-color: rgba(255, 255, 255, 0.5); /* Background transparan */
+    padding: 10px; /* Jarak dalam wrapper */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-wrapper img {
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar card */
+    max-height: 100px; /* Memastikan gambar tidak melebihi tinggi 100px */
+    border-radius: 10px; /* Rounded corners */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+}
+
+/* Text Wrapper */
+.text-wrapper {
+    background-color: #f9f9f9; /* Background warna berbeda */
+    padding: 10px;
+    text-align: center; /* Memusatkan teks */
+}
+
+/* Additional Styles for Buttons */
+.buy-btn {
+    background-color: #FFA500; /* Warna oranye untuk tombol */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #e59400; /* Warna lebih gelap saat hover */
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+    .product-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .section {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9); /* Adjust section background color and opacity */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #333; /* Text color for sections */
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.479);
 }
 
 .section h2 {
@@ -66,8 +334,9 @@ body {
 }
 
 .logo {
-    width: 60px; /* Atur lebar sesuai keinginan Anda */
-    height: auto; /* Agar tinggi gambar menyesuaikan proporsi */
+    width: 85px; /* Adjust logo size */
+    height: auto;
+    margin-right: 20px;
 }
 
 .navbar-right {
@@ -93,101 +362,7 @@ body {
     border-radius: 5px;
 }
 
-.dropdown {
-    position: relative;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.leaderboard {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-
-.leaderboard tr {
-    border-bottom: 1px solid #ddd;
-}
-
-.leaderboard td {
-    padding: 10px;
-    text-align: left;
-}
-
-.rank1, .rank2, .rank3 {
-    animation: colorChange 2s infinite alternate;
-}
-
-.rank1 {
-    background-color: #ffd700;
-}
-
-.rank2 {
-    background-color: #c0c0c0;
-}
-
-.rank3 {
-    background-color: #cd7f32;
-}
-
-@keyframes colorChange {
-    0% { background-color: #ffd700; }
-    50% { background-color: #ffecb3; }
-    100% { background-color: #ffd700; }
-}
-.carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.carousel-slide img {
-    width: 100%;
-    display: block;
-}
-
-.caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    width: 90%;
-    border-radius: 5px;
-}
 
 .card-container {
     display: flex;
